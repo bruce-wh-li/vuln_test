@@ -4,6 +4,8 @@ WORKDIR /src
 
 # Copy and restore project dependencies (example Telerik web app)
 COPY MyTelerikApp.csproj .
+COPY nuget.config .
+COPY MyTelerikApp.csproj .
 RUN dotnet restore
 
 # Copy source and build
