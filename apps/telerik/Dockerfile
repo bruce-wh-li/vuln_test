@@ -20,10 +20,10 @@ COPY --from=build /app/out ./
 # Option A (preferred if you have vendor DLLs): COPY the vendor DLLs into a known folder.
 # For example, place 'Telerik.WinUI.dll' (or the relevant package .dll) into /app/lib/
 # This demonstrates presence of vulnerable component for scanners.
-COPY vulnerable-binaries/Telerik.UI.for.WinUI.*.dll ./lib/
+# COPY vulnerable-binaries/Telerik.UI.for.WinUI.*.dll ./lib/
 
 # If you don't have the DLL locally, you can simulate the package file:
-# RUN mkdir -p lib && echo "placeholder vulnerable telerik dll" > lib/Telerik.UI.for.WinUI-2.11.0.dll
+RUN mkdir -p lib && echo "placeholder vulnerable telerik dll" > lib/Telerik.UI.for.WinUI-2.11.0.dll
 
 EXPOSE 80
 ENTRYPOINT ["dotnet", "VulnWebApp.dll"]
