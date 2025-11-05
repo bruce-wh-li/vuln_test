@@ -1,0 +1,42 @@
+# openshift-deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telerik-vuln-app
+  labels:
+    app: telerik-vuln-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telerik-vuln-app
+  template:
+    metadata:
+      labels:
+        app: telerik-vuln-app
+    spec:
+      containers:
+      - name: telerik-vuln-app
+        image: <your-registry>/telerik-vuln:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: telerik-vuln-svc
+spec:
+  selector:
+    app: telerik-vuln-app
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  type: ClusterIP
