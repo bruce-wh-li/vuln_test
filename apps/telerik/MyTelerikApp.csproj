@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- Telerik UI for ASP.NET Core -->
-    <PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2024.3.0" />
+    <PackageReference Include="Telerik.UI.for.AspNet.Core" Version="2024.3.1111" />
     
     <!-- Standard ASP.NET Core dependencies -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="8.0.0" />
