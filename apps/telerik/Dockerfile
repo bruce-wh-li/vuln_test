@@ -2,9 +2,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
 WORKDIR /app
 
-FROM registry.redhat.io/openshift4/ose-jenkins-agent-base:latest
-
-
 # Create a minimal app folder (the app itself is a tiny ASP.NET host for detection)
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
