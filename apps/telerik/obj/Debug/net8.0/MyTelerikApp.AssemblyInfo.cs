@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyTelerikApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9732980b6539bf27b26ebd5875fcfe73b98b0f76")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b39745b91c461cec705cf0e053e6441ee059dd22")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyTelerikApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyTelerikApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
